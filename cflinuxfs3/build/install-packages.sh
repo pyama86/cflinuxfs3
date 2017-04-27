@@ -6,14 +6,18 @@ function apt_get() {
   apt-get -y --force-yes --no-install-recommends "$@"
 }
 
+export DEBIAN_FRONTEND=noninteractive
+
 packages="
 cron
 less
 libcap2-bin
 libcurl3-dev
-libmariadbclient-dev
+libmariadb-client-lgpl-dev
 libsqlite-dev
 libxml2-dev
+python
+ubuntu-minimal
 
 ruby
 "
@@ -35,7 +39,7 @@ EOS
 apt_get install gpgv
 apt_get update
 apt_get dist-upgrade
-apt_get install ubuntu-minimal $packages
+apt_get install $packages
 apt-get clean
 
 rm -rf /usr/share/doc/* /usr/share/man/* /usr/share/groff/* /usr/share/info/* /usr/share/lintian/* /usr/share/linda/*
