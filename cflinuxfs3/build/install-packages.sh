@@ -17,8 +17,12 @@ less
 libcap2-bin
 libcurl3-dev
 libmariadb-client-lgpl-dev
+liblzma-dev
+libpq-dev
 libsqlite-dev
 libxml2-dev
+libxslt1-dev
+pkg-config
 python
 ubuntu-minimal
 
