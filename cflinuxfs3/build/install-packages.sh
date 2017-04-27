@@ -12,6 +12,7 @@ packages="
 
 build-essential
 cron
+curl
 less
 libcap2-bin
 libcurl3-dev
