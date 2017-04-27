@@ -1,0 +1,7 @@
+/cookbooks
+/tmp
+.vagrant
+*.tgz
+*.tar.gz
+cflinuxfs2/cflinuxfs2_dpkg_l.out
+.idea
