@@ -9,6 +9,8 @@ function apt_get() {
 export DEBIAN_FRONTEND=noninteractive
 
 packages="
+
+build-essential
 cron
 less
 libcap2-bin

@@ -1,9 +1,9 @@
 Cloud Foundry cflinuxfs3
 ====================
 
-This repo contains scripts for creating warden root filesystems.
+This repo contains scripts for creating garden root filesystems.
 
-* cflinuxfs3 derived from Ubuntu 14.04 (Trusty Tahr)
+* cflinuxfs3 derived from Ubuntu 16.04.02 (Xenial Xerus)
 
 # Dependencies
 
