@@ -9,8 +9,12 @@ function apt_get() {
 packages="
 cron
 less
+libcap2-bin
 libcurl3-dev
+libmariadbclient-dev
 libsqlite-dev
+libxml2-dev
+
 ruby
 "
 

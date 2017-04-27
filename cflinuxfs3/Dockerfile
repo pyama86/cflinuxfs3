@@ -3,8 +3,11 @@ FROM ubuntu:xenial
 ADD build /tmp/build
 ADD assets /tmp/assets
 
-RUN bash /tmp/build/configure-locale-timezone.sh
+# https://github.com/moby/moby/issues/1297
+RUN echo "resolvconf resolvconf/linkify-resolvconf boolean false" | debconf-set-selections
+
 RUN bash /tmp/build/install-packages.sh
+RUN bash /tmp/build/configure-locale-timezone.sh
 RUN bash /tmp/build/generate-all-locales.sh
 RUN bash /tmp/build/configure-core-dump-directory.sh
 RUN bash /tmp/build/configure-firstboot.sh

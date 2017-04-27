@@ -2,12 +2,12 @@ all: cflinuxfs3.tar.gz
 
 arch:=$(shell uname -m)
 ifeq ("$(arch)","ppc64le")
-        docker_image := "ppc64le/ubuntu:trusty"
+        docker_image := "ppc64le/ubuntu:xenial"
         docker_file := cflinuxfs3/Dockerfile.$(arch)
         $(shell cp cflinuxfs3/Dockerfile $(docker_file))
-        $(shell sed -i 's/FROM ubuntu:trusty/FROM ppc64le\/ubuntu:trusty/g' $(docker_file))
+        $(shell sed -i 's/FROM ubuntu:xenial/FROM ppc64le\/ubuntu:xenial/g' $(docker_file))
 else
-        docker_image := "ubuntu:trusty"
+	docker_image := "ubuntu:xenial"
         docker_file := cflinuxfs3/Dockerfile
 endif
 

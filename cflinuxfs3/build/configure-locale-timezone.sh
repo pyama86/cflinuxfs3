@@ -11,4 +11,3 @@ dpkg-reconfigure -fnoninteractive -pcritical tzdata
 # locale
 locale-gen en_US.UTF-8
 dpkg-reconfigure -fnoninteractive -pcritical libc6
-dpkg-reconfigure -fnoninteractive -pcritical locales
