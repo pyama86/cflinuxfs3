@@ -9,6 +9,7 @@ function apt_get() {
 export DEBIAN_FRONTEND=noninteractive
 
 packages="
+ubuntu-minimal
 
 build-essential
 bzr
@@ -19,8 +20,9 @@ jq
 less
 libcap2-bin
 libcurl3-dev
-libmariadb-client-lgpl-dev
+libicu-dev
 liblzma-dev
+libmariadb-client-lgpl-dev
 libpq-dev
 libsqlite3-dev
 libxml2-dev
@@ -29,7 +31,7 @@ mercurial
 pkg-config
 python
 subversion
-ubuntu-minimal
+wget
 
 ruby
 "
