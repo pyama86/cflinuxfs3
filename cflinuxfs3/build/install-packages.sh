@@ -11,19 +11,24 @@ export DEBIAN_FRONTEND=noninteractive
 packages="
 
 build-essential
+bzr
 cron
 curl
+git-core
+jq
 less
 libcap2-bin
 libcurl3-dev
 libmariadb-client-lgpl-dev
 liblzma-dev
 libpq-dev
-libsqlite-dev
+libsqlite3-dev
 libxml2-dev
 libxslt1-dev
+mercurial
 pkg-config
 python
+subversion
 ubuntu-minimal
 
 ruby
