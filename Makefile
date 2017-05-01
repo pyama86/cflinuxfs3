@@ -12,8 +12,8 @@ else
 endif
 
 cflinuxfs3.cid:
-	docker build --no-cache -f $(docker_file) -t cloudfoundry/cflinuxfs3 cflinuxfs3
-	docker run --cidfile=cflinuxfs3.cid cloudfoundry/cflinuxfs3 dpkg -l | tee cflinuxfs3/cflinuxfs3_dpkg_l.out
+	docker build --no-cache -f $(docker_file) -t cfbuildpackseng/cflinuxfs3-test cflinuxfs3
+	docker run --cidfile=cflinuxfs3.cid cfbuildpackseng/cflinuxfs3-test dpkg -l | tee cflinuxfs3/cflinuxfs3_dpkg_l.out
 
 cflinuxfs3.tar: cflinuxfs3.cid
 	mkdir -p tmp
