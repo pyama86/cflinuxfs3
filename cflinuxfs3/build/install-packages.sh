@@ -37,6 +37,7 @@ pkg-config
 python
 rsync
 subversion
+unzip
 wget
 
 ruby
