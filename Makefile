@@ -22,4 +22,4 @@ cflinuxfs3.tar: cflinuxfs3.cid
 	rm cflinuxfs3.cid
 
 cflinuxfs3.tar.gz: cflinuxfs3.tar
-	docker run -w /cflinuxfs3 -v `pwd`:/cflinuxfs3 $(docker_image) ./bin/make_tarball.sh cflinuxfs3
+	docker run -w /cflinuxfs3 -v `pwd`:/cflinuxfs3 $(docker_image) bash -c "gzip -f tmp/cflinuxfs3.tar && mv tmp/cflinuxfs3.tar.gz ."
