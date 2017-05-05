@@ -73,4 +73,3 @@ uk_UA
 zh_CN
 zh_HK
 zh_TW" | grep -f - /usr/share/i18n/SUPPORTED | cut -d " " -f 1 | xargs locale-gen
-dpkg-reconfigure -fnoninteractive -pcritical locales

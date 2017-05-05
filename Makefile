@@ -17,9 +17,9 @@ cflinuxfs3.cid:
 
 cflinuxfs3.tar: cflinuxfs3.cid
 	mkdir -p tmp
-	docker export `cat cflinuxfs3.cid` > tmp/cflinuxfs3.tar
+	docker export `cat cflinuxfs3.cid` > cflinuxfs3.tar
 	# Always remove the cid file in order to grab updated package versions.
 	rm cflinuxfs3.cid
 
 cflinuxfs3.tar.gz: cflinuxfs3.tar
-	docker run -w /cflinuxfs3 -v `pwd`:/cflinuxfs3 $(docker_image) bash -c "gzip -f tmp/cflinuxfs3.tar && mv tmp/cflinuxfs3.tar.gz ."
+	docker run -w /cflinuxfs3 -v `pwd`:/cflinuxfs3 $(docker_image) bash -c "gzip -f cflinuxfs3.tar"
