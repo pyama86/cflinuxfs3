@@ -5,6 +5,15 @@ BUILD := $(NAME).$(ARCH)
 
 all: $(BUILD).tar.gz
 
+build:
+	docker build \
+	-t pyama/cflinuxfs3 \
+	--build-arg "base=$(BASE)" \
+	--build-arg "arch=$(ARCH)" \
+	--build-arg packages="`cat "packages/$(NAME)" "arch/$(ARCH)/packages/$(NAME)" 2>/dev/null`" \
+	--build-arg locales="`cat locales`" \
+	--no-cache "--iidfile=$(BUILD).iid" .
+
 $(BUILD).iid:
 	docker build \
 	--build-arg "base=$(BASE)" \
